@@ -226,13 +226,14 @@ Difficulty: Basic
 
 Prompt:
 
-- Write a function called reverseUpcaseString that accepts a single string argument, then returns the string with its characters in reverse orderand converts all characters to uppercase.
+- Write a function called reverseUpcaseString that accepts a single string argument, then returns the string with its characters in reverse order and converts all characters to uppercase.
 
 Examples:
 
 reverseUpcaseString("SEI Rocks!"); //=> "!SKCOR IES" 
 -----------------------------------------------------------------*/
 // Your solution for 07-reverseUpcaseString here:
+
 
 function reverseUpcaseString(str) {
   var results = '';
@@ -269,12 +270,13 @@ Prompt:
 
 Examples:
 
-removeEnds('SEI Rocks!'); //=> "DI Rocks"
+removeEnds('SEI Rocks!'); //=> "EI Rocks"
 removeEnds('a'); //=> "" (empty string)
 -----------------------------------------------------------------*/
 // Your solution for 08-removeEnds here:
 
 /*--- Using for loop ---*/
+
 function removeEnds(str) {
   if (str.length < 3) return '';
   var result= '';

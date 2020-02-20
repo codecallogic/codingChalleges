@@ -175,9 +175,14 @@ range(5,2) //=> "First argument must be less than second"
 -----------------------------------------------------------------*/
 // Your solution for 06-range here:
 
-
-
-
+function range(a, b){
+    if(a > b) return 'First argument must be less than second';
+    let range = [];
+    for(let i = a; i < b; i++){
+        range.push(i);
+    }
+    return range;
+}
 
 /*-----------------------------------------------------------------
 Challenge: 07-reverseUpcaseString
@@ -194,8 +199,13 @@ reverseUpcaseString("SEI Rocks!"); //=> "!SKCOR IES"
 -----------------------------------------------------------------*/
 // Your solution for 07-reverseUpcaseString here:
 
-
-
+function reverseUpcaseString(str){
+  let results = '';
+  for(let i = 0; i < str.length; i++){
+    results = str.charAt(i).toUpperCase() + results;
+  }
+  return results;
+}
 
 
 /*-----------------------------------------------------------------
@@ -215,9 +225,10 @@ removeEnds('a'); //=> "" (empty string)
 -----------------------------------------------------------------*/
 // Your solution for 08-removeEnds here:
 
-
-
-
+function removeEnds(str){
+  if(str.length < 3) return '';
+  return str.slice(1,str.length - 1);
+}
 
 /*-----------------------------------------------------------------
 Challenge: 09-charCount
@@ -238,9 +249,9 @@ charCount('Today is fantastic!') //=> { T: 1, o: 1, d: 1, a: 3, y: 1, ' ': 2, i:
 -----------------------------------------------------------------*/
 // Your solution for 09-charCount here:
 
-
-
-
+function charCount(str){
+  
+}
 
 /*-----------------------------------------------------------------
 Challenge: 10-formatWithPadding

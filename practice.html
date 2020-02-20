@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let num = 1254859723;
+        function nonNegative(n){
+            return parseInt(n.toString().split('').sort((a,b) => b - a).join(''));
+        }
+        console.log(nonNegative(num))
+
+        let array = [25, 50, 25, 25, 25, 100];
+        function spareChange(list){
+            let register = 0;
+            list.forEach( (p) => {
+                if(p === 25){
+                    register += p;
+                    console.log(register)
+                }else if(p > 25 && register >= (p - 25)){
+                    register += p;
+                    register -= (p-25);
+                    console.log("Yes you have change")
+                }else if(p > 25 && register < (p - 25)){
+                    console.log("<h1 style='color:red;'>Go Get Some Change!</h1>")
+                }
+                    console.log(register)
+                
+            })
+        }
+        console.log(spareChange(array))
+
+        let word = "SEI Rocks!"
+
+        function removeEnds(str) {
+            return str.slice(1,str.length - 1);
+            // return remove;
+        }
+        console.log(removeEnds(word));
+    </script>
+</body>
+</html>
