@@ -1,0 +1,20 @@
+*, *:before, *:after{
+    box-sizing: border-box;
+    font-family: monarcha, serif;
+    font-style: normal;
+    font-weight: 800;
+}
+
+tr td{
+    outline:0!important;
+    border:0!important;
+}
+
+tbody button{
+    border-radius:50%;
+    margin: 0vmin 2vmin; 
+}
+
+.input-group {
+    width:50%;
+}

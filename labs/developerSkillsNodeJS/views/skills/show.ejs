@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Document</title>
+</head>
+<body>
+    <h1>Skill # <%= skillNum %></h1>
+    <li>
+        <h3><%= skill.skill %></h3>
+        Status: <%= skill.intermediate ? 'done' : 'not done' %>
+    </li>
+    <br>
+    <a href="/skills/<%= skillNum - 1 %>/edit" target="_blank" rel="noopener noreferrer">Edit</a>
+</body>
+</html>
