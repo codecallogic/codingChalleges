@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootscdn, bootsjs, jquerypopper, jqueryslim, jquery, expressStyle -->
+    <link rel='stylesheet' href='/stylesheets/style.css'>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="display-4 text-center">Flights</h1> <a href="./new" target="" rel="noopener noreferrer" class="btn btn-light">Add new flight</a>
+        <div class="row mt-5 justify-content-center">
+            <table class="table text-center">
+                <thead>
+                    <th>Airline</th>
+                    <th>Flight No.</th>
+                    <th>Departure</th>
+                </thead>
+                <tbody>
+                    <% flight.forEach(function(flight){ %>
+                        <tr>
+                            <td><%= flight.airline %></td>
+                            <td><%= flight.flightNo %></td>
+                            <td><%= flight.departure %></td>
+                        </tr>
+                    <% }) %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

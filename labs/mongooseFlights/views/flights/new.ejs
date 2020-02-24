@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootscdn, bootsjs, jquerypopper, jqueryslim, jquery, expressStyle -->
+    <link rel='stylesheet' href='/stylesheets/style.css'>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <h1 class="display-4">Add new flight</h1>
+    <form action="/flights" method="POST">
+        <div class="form-group">
+            <label for="airline">Airline</label>
+            <input type="text" name="airline" id="airline" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="flightNo">Flight No.</label>
+            <input type="number" name="flightNo" id="flightNo" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="departure">Departure</label>
+            <input type="datetime-local" novalidate name="departure" id="departure" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-dark btn-block">Add flight</button>
+    </form>
+    </div>
+</body>
+</html>

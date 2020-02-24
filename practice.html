@@ -8,39 +8,76 @@
 <body>
     <script>
 
-        let num = 1254859723;
-        function nonNegative(n){
-            return parseInt(n.toString().split('').sort((a,b) => b - a).join(''));
-        }
-        console.log(nonNegative(num))
+        // let num = 1254859723;
+        // function nonNegative(n){
+        //     return parseInt(n.toString().split('').sort((a,b) => b - a).join(''));
+        // }
+        // console.log(nonNegative(num))
 
-        let array = [25, 50, 25, 25, 25, 100];
-        function spareChange(list){
-            let register = 0;
-            list.forEach( (p) => {
-                if(p === 25){
-                    register += p;
-                    console.log(register)
-                }else if(p > 25 && register >= (p - 25)){
-                    register += p;
-                    register -= (p-25);
-                    console.log("Yes you have change")
-                }else if(p > 25 && register < (p - 25)){
-                    console.log("<h1 style='color:red;'>Go Get Some Change!</h1>")
-                }
-                    console.log(register)
+        // let array = [25, 50, 25, 25, 25, 100];
+        // function spareChange(list){
+        //     let register = 0;
+        //     list.forEach( (p) => {
+        //         if(p === 25){
+        //             register += p;
+        //             console.log(register)
+        //         }else if(p > 25 && register >= (p - 25)){
+        //             register += p;
+        //             register -= (p-25);
+        //             console.log("Yes you have change")
+        //         }else if(p > 25 && register < (p - 25)){
+        //             console.log("<h1 style='color:red;'>Go Get Some Change!</h1>")
+        //         }
+        //             console.log(register)
                 
-            })
-        }
-        console.log(spareChange(array))
+        //     })
+        // }
+        // console.log(spareChange(array))
 
-        let word = "SEI Rocks!"
+        // let word = "SEI Rocks!"
 
-        function removeEnds(str) {
-            return str.slice(1,str.length - 1);
-            // return remove;
+        // function removeEnds(str) {
+        //     return str.slice(1,str.length - 1);
+        //     // return remove;
+        // }
+        // console.log(removeEnds(word));
+
+
+        // //Recurssion with helper functions
+        // function sumArrayOfNums(arr){
+        // let index = 0;
+        // let sum = 0;
+        // // Notice the lack of parameters in rSum!
+        // function rSum(){
+        // if(index === arr.length){
+        //     return sum;
+        // }
+        // sum += arr[index];
+        // index++;
+        // return rSum();
+        // }
+        // // Once you’ve defined the helper function, make sure you call it!
+        // return rSum();
+        // }
+
+        let str = 'Hello'
+
+        let count, ch
+
+        let counts = {}
+
+        for(let i = 0; i < str.length; i++){
+        ch = str.charAt(i)
+
+        count = counts[ch]
+
+        counts[ch] = count ? count + 1: 1;
         }
-        console.log(removeEnds(word));
+
+        for(ch in counts){
+            console.log(counts)
+        }
+        
     </script>
 </body>
 </html>
