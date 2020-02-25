@@ -19,6 +19,7 @@
                     <th>Airline</th>
                     <th>Flight No.</th>
                     <th>Departure</th>
+                    <th>Airport</th>
                 </thead>
                 <tbody>
                     <% flight.forEach(function(flight){ %>
@@ -26,6 +27,8 @@
                             <td><%= flight.airline %></td>
                             <td><%= flight.flightNo %></td>
                             <td><%= flight.departure %></td>
+                            <td><%= flight.airport %></td>
+                            <td><a href="/flights/<%= flight._id %>" class="btn btn-dark">Details</a></td>
                         </tr>
                     <% }) %>
                 </tbody>

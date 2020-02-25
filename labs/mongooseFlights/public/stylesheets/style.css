@@ -11,3 +11,17 @@ a {
 label {
   font-size:3vmin;
 }
+
+.row {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+}
+
+.row div:nth-child(even) {
+  font-size:18px;
+}
+
+.details div{
+  margin: 5px 0px 0px 0px;
+}

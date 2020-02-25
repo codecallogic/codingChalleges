@@ -252,9 +252,14 @@ charCount('Today is fantastic!') //=> { T: 1, o: 1, d: 1, a: 3, y: 1, ' ': 2, i:
 function charCount(str){
   let result = {}
   for(let i = 0; i < str.length; i++){
-    ch = str.charAt(i)
-    count = count[ch]
+    let char = str.charAt(i)
+    if(result[char]){
+      result[char]++
+    }else{
+      result[char] = 1
+    }
   }
+  return result
 }
 
 /*-----------------------------------------------------------------

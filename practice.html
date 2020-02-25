@@ -60,23 +60,11 @@
         // return rSum();
         // }
 
-        let str = 'Hello'
+        let str = 'hello'
 
-        let count, ch
+        const char = str.charAt(2)
 
-        let counts = {}
-
-        for(let i = 0; i < str.length; i++){
-        ch = str.charAt(i)
-
-        count = counts[ch]
-
-        counts[ch] = count ? count + 1: 1;
-        }
-
-        for(ch in counts){
-            console.log(counts)
-        }
+        console.log(char)
         
     </script>
 </body>

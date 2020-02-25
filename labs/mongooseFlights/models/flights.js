@@ -3,6 +3,14 @@ const mongoose = require('mongoose')
 //Shortcut Variable 
 const Schema = mongoose.Schema
 
+const destinationsSchema = new Schema({
+    airport: {
+        type: String,
+        enum: ['AUS','DEN','DFW','LAX','SAN']
+    },
+    arrival: Date
+})
+
 const flightSchema = new Schema({
     airline: {
         type: String,
@@ -21,6 +29,11 @@ const flightSchema = new Schema({
             Date.now + 1;
         },
     },
+    airport: {
+        type: String,
+        enum: ['AUS','DEN','DFW','LAX','SAN']
+    },
+    destinations: [destinationsSchema]
 })
 
 let oneYear = 365 * 24 * 60 * 60 * 1000;
